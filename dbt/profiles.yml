@@ -1,0 +1,13 @@
+dbt_project:
+  target: test
+  outputs:
+    test:
+      type: bigquery
+      method: service-account
+      project: dbt-project-399518
+      dataset: raw
+      threads: 1
+      timeout_seconds: 300
+      location: US
+      priority: interactive
+      keyfile: /home/ec2-user/gcp_config/keyfile.json

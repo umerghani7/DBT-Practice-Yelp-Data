@@ -11,9 +11,7 @@ WITH unioned_edges_legs_us AS (
 		{% set table_name = 'int_edgebook_us_' ~ region.region_code ~ '_legs_bets' %}
 
 		/* {{ region.region_name }} */
-		SELECT
-			{{ dbt_utils.star( ref(table_name), except=[ "retail_session_id", "penn_play_id", "property_code", "redeemed_at", "realized_at", "is_penn_play_bet", "is_redeemed", "is_realized", "retail_ggr_bet", "retail_ggr_adjusted_free_bet", "retail_ggr_leg", "retail_ggr_adjusted_free_leg", "_ae_updated_at" ] ) }}
-
+		SELECT col1
 		FROM {{ ref(table_name) }}
 		WHERE {{ filter_online_retail() }}
 

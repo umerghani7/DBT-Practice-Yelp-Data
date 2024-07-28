@@ -10,7 +10,7 @@ WITH base AS (
 		,url
 		,new_col
 		,review_count
-		,categories
+		,categories as cat
 		,rating
 		,price
 		,phone

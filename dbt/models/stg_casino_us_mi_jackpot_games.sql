@@ -6,7 +6,7 @@
 
 WITH last_record AS (
 	SELECT
-		game_id
+		game_id as gma
 		,jackpot_id
 		,MAX(inserted_at / 100) AS max_inserted_at
 	FROM {{ source('casino_us_mi', 'jackpot_games') }}

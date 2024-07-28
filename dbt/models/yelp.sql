@@ -8,6 +8,7 @@ WITH base AS (
 		id
 		,name AS restaurant_name
 		,url
+		,new_col
 		,review_count
 		,categories
 		,rating

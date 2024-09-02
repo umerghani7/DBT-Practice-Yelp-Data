@@ -96,7 +96,7 @@ WITH unioned_edges_legs_us AS (
 		,base_ca.is_past_180_days
 		,base_ca.is_past_365_days
 		,base_ca._inserted_at
-		,base_ca._updated_at
+		-- ,base_ca._updated_at
 
 	FROM {{ ref('fct_edgebook_cad_bet_legs') }} AS base_ca
 	INNER JOIN {{ ref('dim_fx_rates') }} AS fx_rates
